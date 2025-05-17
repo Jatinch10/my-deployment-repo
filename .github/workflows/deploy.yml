@@ -1,0 +1,25 @@
+name: Basic CI/CD Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Simulate file upload
+        run: echo "Uploading files to server (simulated)..."
+
+      - name: Simulate app restart
+        run: echo "Restarting application on server (simulated)..."
+
+      - name: Check app status
+        run: echo "Checking if application is running (simulated)..."
+
+      - name: Deployment complete
+        run: echo "Deployment finished successfully!"
